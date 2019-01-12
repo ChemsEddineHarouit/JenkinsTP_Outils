@@ -6,5 +6,10 @@ pipeline {
         sh 'gradle uploadArchives'
       }
     }
+    stage('Mail-Notification') {
+      steps {
+        mail(subject: 'Jenkins Notification TP_Outils', body: 'Un nouveau push dans le repo TP_Outils')
+      }
+    }
   }
 }
