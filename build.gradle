@@ -34,9 +34,16 @@ uploadArchives {
     }
 }
 
+apply plugin: 'java'
+
+javadoc {
+    source "com/"
+	destinationDir "com/doc"
+}
+
 uploadArchives.dependsOn("build")
 
-
+javadoc.dependsOn("build")
 
 group 'matrix'
 version '1.0'
