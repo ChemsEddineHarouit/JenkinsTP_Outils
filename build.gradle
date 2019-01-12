@@ -38,5 +38,5 @@ uploadArchives.dependsOn("build")
 
 
 
-group 'matrix'
+group 'matrix_test'
 version '1.0'
