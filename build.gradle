@@ -35,3 +35,8 @@ uploadArchives {
 }
 
 uploadArchives.dependsOn("build")
+
+
+
+group 'matrix'
+version '1.0'
