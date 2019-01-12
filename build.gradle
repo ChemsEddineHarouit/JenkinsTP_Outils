@@ -36,14 +36,15 @@ uploadArchives {
 
 apply plugin: 'java'
 
-javadoc {
-    source "com/"
-	destinationDir "com/doc"
-}
 
 uploadArchives.dependsOn("build")
 
+javadoc {
+    source "com/"
+}
+
 javadoc.dependsOn("build")
 
-group 'matrix'
+
+group 'matrix_test'
 version '1.0'
