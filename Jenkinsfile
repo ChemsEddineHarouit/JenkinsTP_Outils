@@ -11,5 +11,19 @@ pipeline {
         mail(subject: 'Jenkins Notification TP_Outils', body: 'Un nouveau push dans le repo TP_Outils', to: 'fc_harouit@esi.dz ; fa_bouchebaba@esi.dz')
       }
     }
+    stage('Code Check') {
+      parallel {
+        stage('Test Reporting') {
+          steps {
+            sh 'echo ""'
+          }
+        }
+        stage('Code Analysis') {
+          steps {
+            sh 'echo "sonar"'
+          }
+        }
+      }
+    }
   }
 }
