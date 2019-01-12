@@ -37,6 +37,13 @@ uploadArchives {
 uploadArchives.dependsOn("build")
 
 
+javadoc {
+    source "com/"
+    dest "jdc"
+}
+
+javadoc.dependsOn("build")
+
 
 group 'matrix_test'
 version '1.0'
