@@ -15,12 +15,13 @@ pipeline {
       parallel {
         stage('Test Reporting') {
           steps {
-            sh 'gradle jacoco'
+            sh 'echo ""'
           }
         }
         stage('Code Analysis') {
           steps {
-            sh 'echo "sonar"'
+            withSonarQubeEnv 'sonarqube'
+            waitForQualityGate true
           }
         }
       }
