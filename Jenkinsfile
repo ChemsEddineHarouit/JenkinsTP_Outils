@@ -15,7 +15,7 @@ pipeline {
       parallel {
         stage('Test Reporting') {
           steps {
-            sh 'echo ""'
+            sh 'gradle jacoco'
           }
         }
         stage('Code Analysis') {
