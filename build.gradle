@@ -39,7 +39,6 @@ uploadArchives.dependsOn("build")
 
 javadoc {
     source "com/"
-    dest "jdc"
 }
 
 javadoc.dependsOn("build")
